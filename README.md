@@ -1,8 +1,11 @@
 # RUSSIAN
 
 # СПИСОК ЗАДАЧ  
+
 ---  
-#### управление  
+
+#### управление 
+
 |клавиша| функция|
 |insert |создать новую задачу|
 |tab | выбрать следующию задачу|
@@ -15,7 +18,9 @@
 
 # TODO LIST
 ---  
+
 #### INPUT
+
 |key | function|
 |insert | create new task|
 |tab | select next task|
