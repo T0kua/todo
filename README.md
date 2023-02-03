@@ -27,4 +27,4 @@
 |insert | create new task|
 |tab | select next task|
 |del | remove task|
-|enter - task is (don't) done |
+|enter |task is (don't) done |
