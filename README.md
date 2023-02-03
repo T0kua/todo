@@ -7,6 +7,7 @@
 #### управление 
 
 |клавиша| функция|
+|---|---|
 |insert |создать новую задачу|
 |tab | выбрать следующию задачу|
 |del | удалить задачу |
@@ -22,6 +23,7 @@
 #### INPUT
 
 |key | function|
+|---|---|
 |insert | create new task|
 |tab | select next task|
 |del | remove task|
