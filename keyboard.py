@@ -1,7 +1,8 @@
 from pynput import keyboard
 import os
-import ujson
+import json
 import math
+import time
 
 page = 1
 cursor = 0
@@ -10,7 +11,8 @@ def get_data(tom=None,name=None):
 	global data
 	#tom,name = "answer","message"
 	file = open("data.json")
-	data = ujson.loads(file.readline())
+	data = json.loads(file.readline())
+	print(data)
 	file.close()
 	try:
 		if tom == None:
@@ -30,12 +32,12 @@ def menu():
 	for i in data :
 		if cursor == j :
 			try :
-				print(f"> {i[:6]}{i.split('~')[1] }")
+				print(f"> {i[:6]}{i.split('~')[-1] }")
 			except :
 				print(f"> {i.split('~')[0] }")
 		else :
 			try :
-				print(f"  {i[:6]}{i.split('~')[1] }")
+				print(f"  {i[:6]}{i.split('~')[-1] }")
 			except :
 				print(f"  {i.split('~')[0] }")
 		j += 1
@@ -47,20 +49,21 @@ def menu():
 def on_release(key):
 	global cursor
 	global data
-	menu()
+	#menu()
 	#print(f'{key} released')
 	if key == keyboard.Key.insert :
 		t = input("введите задачу >> ")
+		time.sleep(2)
 		data["task"].insert(0," ")
 		data["task"][0] =  f"[ ] - {t}"
 		file = open("data.json","w")
-		file.writelines(ujson.dumps(data))
+		file.writelines(json.dumps(data))
 		file.close()
 
 	if key == keyboard.Key.delete :
 		data["task"].pop(cursor)
 		file = open("data.json","w")
-		file.writelines(ujson.dumps(data))
+		file.writelines(json.dumps(data))
 		file.close()
 		cursor = 0
 	if key ==  keyboard.Key.enter :
@@ -69,7 +72,7 @@ def on_release(key):
 		elif  "[X] " in  repr(data["task"][cursor]) :
 			data["task"][cursor] = (repr(data["task"][cursor]).replace("[X]","[ ]"))[1:-1]
 		file = open("data.json","w")
-		file.writelines(ujson.dumps(data))
+		file.writelines(json.dumps(data))
 		file.close()
 	if key ==  keyboard.Key.tab :
 		cursor += 1
