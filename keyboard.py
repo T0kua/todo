@@ -41,7 +41,7 @@ def on_release(key):
 	menu()
 	if key == keyboard.Key.insert :
 		t = input("введите задачу >> ")
-		data.insert(0,f"[ ] - {t}")
+		data.insert(0,f"[ ] - {t}\n")
 		wrtln(data)
 
 	if key == keyboard.Key.delete :
