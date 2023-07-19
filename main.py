@@ -41,7 +41,7 @@ def draw(e = None,):
 
     #отрисовка задач, выделенная подсвечвается
     for m in range(len(matrix[menu])):
-        std.refresh()
+        #std.refresh()
         if m != cursor:
             std.addstr(m + exe,0,f"{matrix[menu][m]}{(row - len(matrix[menu][m])) * ' '}",curses.color_pair(1))
         else:
