@@ -8,4 +8,14 @@
 [ ] insert - создание нового меню на последней странице
 [V] End - удаление пустого меню
 new_list_programm
-[ ] тестовая задача
+[ ] git
+[ ] laravel
+[ ] php
+[ ] apachi
+[ ] mysql
+[ ] терминал
+[ ] kubernetes
+[ ] docker
+new_list_programm
+[ ] регуляторные выражения
+[ ] облачные технологии

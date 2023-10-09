@@ -101,8 +101,9 @@ while True:
         elif "[ ]" in matrix[menu][cursor] :
             matrix[menu][cursor] = matrix[menu][cursor].replace("[ ]","[V]")
         wrtln(matrix)
-    elif e == 263 and mode_create == False:#удаление
+    elif e == 263 and mode_create == True:#удаление
         new_task = new_task[:-1]
+        draw(e)
     elif e == 261 and mode_create == False:#следующее меню
         menu += 1
         if menu > len(matrix) - 1:
