@@ -30,8 +30,13 @@ std.keypad(True)
 menu = cursor = 0
 curses.init_pair(1, curses.COLOR_WHITE,curses.COLOR_BLACK)
 curses.init_pair(2, curses.COLOR_BLACK,curses.COLOR_WHITE)
-row = int(os.popen("stty size","r").read().split()[1])#символов в строке
-columms = int(os.popen("stty size","r").read().split()[0])#столбцы
+
+try:
+	row = int(os.popen("stty size","r").read().split()[1])#символов в строке
+	columms = int(os.popen("stty size","r").read().split()[0])#столбцы
+except:
+	row = 120
+	columms = 30
 credits = "TODO by sonju"
 def draw(e = None,):
     exe = 1#сдвиг строк, 0 строка занята credits
@@ -101,7 +106,7 @@ while True:
         elif "[ ]" in matrix[menu][cursor] :
             matrix[menu][cursor] = matrix[menu][cursor].replace("[ ]","[V]")
         wrtln(matrix)
-    elif e == 263 and mode_create == True:#удаление
+    elif (e == 263 or e == 8) and mode_create == True:#удаление
         new_task = new_task[:-1]
         draw(e)
     elif e == 261 and mode_create == False:#следующее меню
@@ -118,12 +123,12 @@ while True:
                 matrix[menu].pop(cursor)
             except:
                 pass
-    elif e == 331 and mode_create == False and menu == len(matrix) - 1:#создание меню
+    elif (e == 331 or e == 506) and mode_create == False and menu == len(matrix) - 1:#создание меню
         matrix.append([])
         menu += 1
         mode_create = True
         wrtln(matrix)
-    elif e == 360 and mode_create == False and len(matrix[menu]) == 0:#удаление меню
+    elif (e == 360 or e == 455) and mode_create == False and len(matrix[menu]) == 0:#удаление меню
         matrix.pop(menu)
         menu -= 1
         wrtln(matrix)

@@ -1,3 +1,6 @@
 import os
 
-os.system("pip3 install curses")
+try:
+	os.system("pip3 install curses")
+except:
+	os.system("pip3 install windows-curses")
