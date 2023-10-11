@@ -1,9 +1,9 @@
 # приложение СПИСОК ЗАДАЧ  
 --------------------------
 
-* [***FAQ***][13]
-* [***запуск***][12]
-* [***programmers***][11]
+* [***FAQ***](https://github.com/T0kua/todo#faq)
+* [***запуск***](https://github.com/T0kua/todo#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA)
+* [***programmers***](https://github.com/T0kua/todo#%D0%BF%D0%BE%D0%B3%D1%80%D0%BE%D0%BC%D0%BC%D0%B8%D1%81%D1%82s-team)
 -------------------------------
 ## FAQ  
 ![image](https://github.com/T0kua/T0kua/blob/main/image/todoapp.png)  
@@ -27,7 +27,7 @@
 через git (Linux) `git clone https://github.com/T0kua/todo && python3 install.py && python3 main.py`  
 для ~~мазахистов~~ тех кто хочет в ручную{  
 
-1. скачать [архив][1]  
+1. скачать [архив](https://github.com/T0kua/todo/archive/refs/heads/main.zip)  
 2. распаковать в любую удобную директорию  
 3. запустить файл `install.py`  
     - Linux : `python3 install.py`  
@@ -48,13 +48,5 @@
 Создатель 
 
 
-[1]:(https://github.com/T0kua/todo/archive/refs/heads/main.zip)
 
-[2]:(https://github.com/T0kua/T0kua/blob/main/image/fase-rounded.png)
-
-[11]:(https://github.com/T0kua/todo#%D0%BF%D0%BE%D0%B3%D1%80%D0%BE%D0%BC%D0%BC%D0%B8%D1%81%D1%82s-team)
-
-[12]:(https://github.com/T0kua/todo#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA)
-
-[13]:(https://github.com/T0kua/todo#faq)
 
