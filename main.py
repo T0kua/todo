@@ -4,7 +4,11 @@ import keyboarde
 dev = __file__.replace("main.py","")
 def get_data():
     #получение данных
-    file = open(f"{dev}data.txt")
+    try:
+    	file = open(f"{dev}data.txt")
+    except:
+       wrtln("")
+       file = open(f"{dev}data.txt")
     text = file.readlines()
     file.close()
     return text
