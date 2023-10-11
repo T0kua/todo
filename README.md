@@ -22,9 +22,14 @@
 }
 ----------------------------------
 ## запуск  
-через git (Windows) `git clone https://github.com/T0kua/todo && python install.py && python main.py`  
+через git (Windows)   
 
-через git (Linux) `git clone https://github.com/T0kua/todo && python3 install.py && python3 main.py`  
+```git clone https://github.com/T0kua/todo && python install.py && python main.py```  
+
+через git (Linux)  
+
+```git clone https://github.com/T0kua/todo && python3 install.py && python3 main.py```  
+
 для ~~мазахистов~~ тех кто хочет в ручную{  
 
 1. скачать [архив](https://github.com/T0kua/todo/archive/refs/heads/main.zip)  
